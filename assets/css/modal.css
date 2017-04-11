@@ -1,0 +1,21 @@
+#work{
+  text-align: center;
+  color: black;
+}
+.text-work{
+  font-size: 35px;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+.box-work {
+  box-sizing: border-box;
+  margin:4% 2%;
+}
+
+img.modal{
+  display: inline-block;
+  border-radius: 15px;
+  width: 350px;
+  height: 250px;
+  margin: 1%;
+}
