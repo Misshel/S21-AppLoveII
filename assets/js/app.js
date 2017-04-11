@@ -1,4 +1,7 @@
-var ittem=[];
+var ittem=["","TAIMAN","KERALA-GEL","THE BRASS COQ",
+          "SUNGENRE-DISCO","MITRAGYNA SPECIOSA",
+          "FOAM KINE","VOLITION","INK","GILKON",
+        "OWLS & APPLES", "SHERWOOD","PLATINUM"];
 
 for(var i=1;i<13;i++){
   var blockImage= document.getElementById("work-box"); //
@@ -6,29 +9,29 @@ for(var i=1;i<13;i++){
   var img= document.createElement("img");
   var span= document.createElement("span");
   img.setAttribute("src","assets/image/img-"+ i +".jpg");
-  span.innerHTML=i;
-  img.setAttribute("class","modal");
-  div.setAttribute("class","div-modal")
+  img.setAttribute("alt",ittem[i]);
+  span.innerHTML=img.alt;
+  img.setAttribute("class","modal-img");
+  div.setAttribute("class","div-modal");
   div.appendChild(img);
   div.appendChild(span);
   blockImage.appendChild(div);
-}
+  }
 
-var modal= document.getElementsByClassName("div-modal");
 
-modal.addEventListener("click",funtion(event){
-  var img=document.getElementsByClassName("modal");
-  var close= document.createElement(Span);
-  close.setAttribute("id","cerrar");
+var modal=document.getElementsByClassName("modal")[0];
+var cerrar=document.getElementsByClassName("boton-cerrar")[0];
+var boximg=document.getElementById("work-box");//contenedor de imagenes
+var imagen=document.getElementById("imagen");//contenido del modal
+    boximg.addEventListener('click',function (e) {
+      if (e.target.tagName =="IMG"){
+        modal.style.display="block";
+        cerrar.style.display="inline-block";
+        imagen.src=e.target.src;
+      }
+    });
 
-  close.innerHTML="X";
-  modal.style.display = "block";
-  for(var i=1;i<13;i++){
-  img[i].src=this.src;
-}
-})
-var close= document.createElement(Span);
-
-close.addEventListener("click",funtion(){
-  modal.style.display = "none";
-})
+cerrar.addEventListener("click",function(){
+      cerrar.style.display="none";
+      modal.style.display="none";
+    });
