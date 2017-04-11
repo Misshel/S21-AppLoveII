@@ -7,9 +7,15 @@
   letter-spacing: 2px;
   margin-top: 25px;
 }
-.box-work {
-  box-sizing: border-box;
-  margin:4% 2%;
+
+.box-work,
+div.div-modal {
+ box-sizing: border-box;
+  margin:2% 1%;
+}
+
+.div-modal{
+  display: inline-block;
 }
 
 img.modal{
